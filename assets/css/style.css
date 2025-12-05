@@ -1,0 +1,170 @@
+:root {
+    --black: #000;
+    --dark: #0A0A0A;
+    --card: #111;
+    --gold: #D4AF37;
+    --gold-soft: #C9A86A;
+    --text: #EEE;
+    --muted: #777;
+    --sidebar-width: 300px;
+    --transition: 0.35s ease;
+}
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: var(--black);
+    font-family: Pretendard, sans-serif;
+    color: var(--text);
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    width: var(--sidebar-width);
+    height: 100vh;
+    padding: 40px 25px;
+    background: #0A0A0A;
+    border-right: 1px solid var(--gold-soft);
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    border: 2px solid var(--gold);
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+.name span { font-size: 1.1rem; color: var(--text); }
+
+.role {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 40px;
+}
+
+.nav-menu a {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.nav-menu a:hover { color: var(--gold); }
+
+/* MAIN CONTENT */
+.content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    padding: 50px 60px;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 0;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--gold);
+}
+
+.hero-sub {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+/* AI MICROCHIP BACKGROUND */
+.chip-pattern {
+    width: 100%;
+    height: 220px;
+    margin-top: 40px;
+    background: url('https://i.ibb.co/cvKRTnG/circuit.png');
+    background-size: cover;
+    opacity: 0.22;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.line-trace::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--gold);
+    left: 0;
+    bottom: -6px;
+    animation: lineDraw 1.2s forwards;
+}
+
+@keyframes lineDraw {
+    to { width: 120px; }
+}
+
+/* CARDS */
+.card {
+    background: var(--card);
+    padding: 25px;
+    border: 1px solid #1a1a1a;
+    border-left: 2px solid var(--gold);
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+/* GRID */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+/* 기본 링크 스타일 */
+a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.25s, border-color 0.25s;
+    position: relative;
+}
+
+/* 밑줄 애니메이션 */
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.35s ease;
+}
+
+/* 호버 시 효과 */
+a:hover {
+    color: var(--gold);
+}
+
+a:hover::after {
+    width: 100%;
+}
