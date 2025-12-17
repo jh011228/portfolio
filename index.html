@@ -1,179 +1,271 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choi Janghyun (최장현)</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최장현 | 정보보호·개인정보 분석가</title>
+  <style>
+:root{
+  /* Background */
+  --bg-main:#f6f4f1;          /* 웜 아이보리 */
+  --bg-card:#ffffff;         /* 카드 배경 */
+
+  /* Line / Border */
+  --line:#e3ded7;             /* 웜 그레이 라인 */
+
+  /* Text */
+  --text-main:#2a2e34;        /* 차분한 차콜 */
+  --text-sub:#6b7280;         /* 뉴트럴 그레이 */
+
+  /* Accent */
+  --accent-net:#4f6fad;       /* 소프트 인디고 */
+  --accent-sec:#5fa89e;       /* 더스티 민트 */
+  --accent-warn:#d9a441;      /* 머스타드 골드 */
+}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+    background:linear-gradient(180deg,#eef4ff 0%,var(--bg-main) 40%);
+    color:var(--text-main);
+    line-height:1.65;
+  }
+
+  a{color:var(--accent-net);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .container{max-width:1100px;margin:0 auto;padding:56px 24px}
+
+  header{
+    margin-bottom:72px;
+    padding:36px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:linear-gradient(135deg,#f8fbff,#eef4ff);
+  }
+
+  header h1{font-size:2.4rem;margin:0}
+  header h2{font-size:1.15rem;font-weight:500;color:var(--text-sub);margin:6px 0 14px}
+
+  .contact{margin-top:10px;color:var(--text-sub);font-size:0.95rem}
+
+  section{margin-bottom:72px}
+
+  section h3{
+    font-size:1.55rem;
+    margin-bottom:28px;
+    padding-left:14px;
+    border-left:4px solid var(--accent-net);
+    color:#0b3b8f;
+  }
+
+  .card{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px;
+    margin-bottom:22px;
+    box-shadow:0 8px 20px rgba(15,23,42,0.06);
+  }
+
+  .card h4{
+    margin-top:0;
+    margin-bottom:10px;
+    color:var(--accent-sec);
+    letter-spacing:0.2px;
+  }
+
+  ul{padding-left:20px}
+  ul li{margin-bottom:6px}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:14px;
+    padding:10px 18px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#eaf1ff,#dbeafe);
+    color:var(--accent-net);
+    border:1px solid #c7d7f2;
+    font-size:0.95rem;
+    font-weight:500;
+  }
+
+  .btn:hover{
+    background:linear-gradient(135deg,#dbeafe,#bfdbfe);
+    color:#1e40af;
+  }
+
+  img{
+    box-shadow:0 0 0 1px rgba(37,99,235,0.25),0 6px 20px rgba(37,99,235,0.15);
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding-top:28px;
+    text-align:center;
+    color:var(--text-sub);
+    font-size:0.9rem;
+  }
+</style>
 </head>
-
 <body>
+<div class="container">
 
-<!-- ======================= SIDEBAR ======================= -->
-<aside class="sidebar">
-    <div class="profile-section">
-        <img src="/assets/img/KakaoTalk_20251203_172237698.jpg" alt="Profile" class="profile-img">
-        <h2 class="name">Choi Janghyeon<br><span>(최장현)</span></h2>
-        <p class="role">Security & Compliance Consultant</p>
+<header>
+  <div style="display:flex;gap:32px;align-items:center;flex-wrap:wrap">
+    <img src="./assets/img/KakaoTalk_20251203_172237698.jpg" alt="최장현 프로필 사진" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:2px solid #334155" />
+    <div>
+      <h1>최장현</h1>
+      <h2>정보보호·개인정보 분석가</h2>
+      <p>
+        관리적·기술적 보안 체계에 대한 이해를 바탕으로 보안 거버넌스 관점의 개선 방향을 고민합니다.
+      </p>
+      <div class="contact">
+        📧 jh01122844@gmail.com · 📍 Siheung<br />
+        GitHub: <a href="https://github.com/jh011228" target="_blank">github.com/jh011228</a>
+      </div>
     </div>
+  </div>
+</header>
 
-    <nav class="nav-menu">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#compliance">Compliance</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#vuln">Web Vulnerability</a>
-        <a href="#projects">Personal Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="#portfolio-projects">Project Portfolio</a>
-    </nav>
-</aside>
+<section>
+  <h3>핵심 역량</h3>
+<div class="grid">
+  <div class="card">
+    <h4>정보보호 관리</h4>
+    <ul>
+      <li>ISMS-P 보호조치 체계 이해 및 통제항목 분석</li>
+      <li>관리적 · 기술적 · 물리적 보안 통제 구분 및 적용</li>
+      <li>보안 정책 · 지침 · 절차서 구조 설계</li>
+      <li>위험 분석 기반 보안 요구사항 도출</li>
+      <li>보안 이슈 및 개선사항 문서화</li>
+    </ul>
+  </div>
 
-<!-- ======================= MAIN CONTENT ======================= -->
-<main class="content">
+  <div class="card">
+    <h4>개인정보 보호</h4>
+    <ul>
+      <li>개인정보 처리 흐름도(DFD) 작성</li>
+      <li>개인정보 생명주기(수집·이용·보관·파기) 관리</li>
+      <li>개인정보 항목 분류(일반·민감·고유식별정보)</li>
+      <li>개인정보 위험요인 식별 및 보호대책 수립</li>
+      <li>개인정보 유출 사고 대응 절차 이해</li>
+    </ul>
+  </div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1 class="hero-title">Security & Compliance Consultant</h1>
-        <p class="hero-sub">정교한 분석과 신뢰 기반의 보안 전략을 제공합니다.</p>
-        <div class="chip-pattern"></div>
-    </section>
+  <div class="card">
+    <h4>기술적 보안 이해</h4>
+    <ul>
+      <li>네트워크·시스템·웹 보안 취약점 점검 이해</li>
+      <li>주요정보통신기반시설 기준 취약점 진단 경험</li>
+      <li>로그·계정·접근통제 관점 보안 설정 이해</li>
+      <li>보안 취약점 결과 분석 및 조치 방안 도출</li>
+      <li>기술적 보안 내용을 문서·보고서로 정리</li>
+    </ul>
+  </div>
+</div>
+</section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <h2 class="section-title line-trace">ABOUT</h2>
-        <div class="card">
-            <p>
-                
-            </p>
-        </div>
-    </section>
+<section>
+  <h3>프로젝트 & 포트폴리오</h3>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-        <h2 class="section-title line-trace">TECHNICAL SKILLS</h2>
+  <div class="card">
+    <h4>중간 프로젝트 · 틈새빛 (웹 개발)</h4>
+    <p>
+      <strong>작업기간</strong> : 2025.07.30 ~ 2025.08.29<br />
+      <strong>작업인원</strong> : 3명<br />
+      <strong>사용기술</strong> : VS Code, Java, Apache Tomcat, Oracle 21c
+    </p>
+    <p>
+      청년들을 위한 사회 연결 프로그램으로,</br> 
+      현재 청년 중 쉬고 있는 청년의 수가 늘어가는 것을 파악해 쉬고있는 청년들의 사회 진출을 돕기 위한 프로젝트입니다.</br>
+      MVC2 패턴을 기반으로 백엔드 구조를 설계하였으며, View 영역에서는 EL과 JSTL을 활용하여 데이터 출력과 흐름을 구현했습니다.</br>
+      프로젝트에서 백엔드 개발 기준으로 관리자페이지 전반, 후원(결제)를 담당했습니다.
+    </p>
+    <ul>
+      <li>Servlet / JSP / MyBatis 기반 MVC2 아키텍처</li>
+      <li>Oracle DB 연동 및 CRUD 구현</li>
+      <li>EL, JSTL 기반 View 로직 구성</li>
+    </ul>
+    <a class="btn" href="https://www.notion.so/3-_-2802ce5a73a480c4a020e2613a3e6640" target="_blank">📘 프로젝트 노션 보기</a>
+    <a class="btn" href="https://github.com/team3-rebooting" target="_blank">📘 GitHub Repository</a>
+    <a class="btn" href="./assets/img/틈새빛_최장현_포트폴리오.pdf" target="_blank">📄 포트폴리오 PDF</a>
+  </div>
 
-        <div class="grid-3">
-            <div class="card">
-                <h3>System Analysis</h3>
-                <ul>
-                    <li>서버·네트워크 구조 분석</li>
-                    <li>리스크 매핑 및 공격 표면 식별</li>
-                    <li>아키텍처 보안성 평가</li>
-                </ul>
-            </div>
+  <div class="card">
+    <h4>개인 프로젝트 · 개인정보 보호(가상 주식 매매 어플리케이션)</h4>
+    <p>
+      <strong>작업기간</strong> : 2025.11.20 ~ 2025.11.27<br />
+      <strong>작업인원</strong> : 1명<br />
+      <strong>사용도구</strong> : Figma, Excel
+    </p>
+    <p>
+      개인정보 처리 흐름을 구조적으로 이해하고,</br>
+      개인정보 항목별 특성과 처리 단계에 따른 위험요인을 스스로 분석해보기 위해</br>
+      개인정보 보호 관리 관점의 개인 프로젝트를 수행하였습니다.
+    </p>
+    <ul>
+      <li>개인정보 흐름도(DTD) 작성</li>
+      <li>개인정보 항목별 분류표 작성</li>
+      <li>개인정보 처리 흐름도 및 위험평가 작성</li>
+      <li>개선 조치 작성</li>
+    </ul>
+    <a class="btn" href="https://www.notion.so/2b82ce5a73a48082b6c8c95af31e2f89" target="_blank">📘 프로젝트 노션 보기</a>
+    <a class="btn" href="https://www.figma.com/design/TqAChiAqq33jzHNFikcAfJ/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4-%ED%9D%90%EB%A6%84%EB%8F%84?node-id=0-1&p=f&t=kqAIcD5BZeckCwyn-0" target="_blank">📄 개인정보 흐름도 Figma</a>
+    <a class="btn" href="./assets/img/개인정보_처리현황_분석보고서.xlsx" target="_blank">📄 개인정보_처리현황_분석보고서</a>
+  </div>
 
-            <div class="card">
-                <h3>Compliance</h3>
-                <ul>
-                    <li>ISMS-P 통제 항목 기반 진단</li>
-                    <li>개인정보보호법·전자금융법 준수 검토</li>
-                    <li>개인정보 흐름도·처리 단계 분석</li>
-                </ul>
-            </div>
+  <div class="card">
+    <h4>최종 프로젝트 · 정보 보호 컨설팅 기반 네트워크 웹 보안 사업</h4>
+    <p>
+      <strong>작업기간</strong> : 2025.11.03 ~ 2025.12.12<br />
+      <strong>작업인원</strong> : 6명<br />
+      <strong>사용기술</strong> : VMware, Rocky Linux, CentOS Linux, Kali Linux, GNS3, Putty, 문서도구(Excel/Word/HWP)
+    </p>
+    <p>
+      PL을 맡아 본사/지사로 나누어져있는 개별 인원의 통일성을 맞추기 위해 노력하였고,</br>
+      웹 서비스를 제공하는 가상의 기업 환경을 설정하고,</br>
+      보안 침해 시나리오와 인프라 구성도를 기반으로</br>
+      주요정보통신기반시설 취약점 분석·평가 가이드 를 기준으로</br>
+      UNIX, 웹 서비스 전반에 대한 취약점 진단 및 보안 설정을 수행한 프로젝트입니다.</br>
+      또한 PHP 기반 웹 서비스에 대한 취약점 진단을 수행했습니다.</br>
+      본 프로젝트에서 CentOS 서버 설치/점검, Rocky Linux 설치/보안/점검, 정책서 작성,</br> 
+      ELK Stack 기반 LOG 모니터링 시스템 구축을 담당했습니다.</br>
+    </p>
+    <ul>
+      <li>CentOS 서버 설치/점검(취약기준), Rocky Linux 서버 설치/점검/보안</li>
+      <li>ELK Stack 기반 LOG 모니터링 시스템 구축</li>
+      <li>정책서</li>
+    </ul>
+    <a class="btn" href="https://www.notion.so/_1-_-2cc2ce5a73a4811f805aef4c5c7b08c7" target="_blank">📘 프로젝트 노션 보기</a>
+    <a class="btn" href="" target="_blank">📄 로그 서버 구축 사진 </a>
+    <a class="btn" href="./assets/img/1팀_푸드파이터_발표자료_v1.00_251215.pdf" target="_blank">📄 포트폴리오 PDF</a>
+  </div>
+</section>
 
-            <div class="card">
-                <h3>Web Security</h3>
-                <ul>
-                    <li>OWASP Top 10 진단</li>
-                    <li>SQLi / XSS / CSRF 분석</li>
-                    <li>웹 서버 설정 보안 점검</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<section>
+  <h3>목표</h3>
+  <div class="card">
+    <p>
+      정보보호 및 개인정보 보호 관리체계를 이해하고,  </br>
+      기술적 보안에 대한 이해를 바탕으로  </br>
+      조직의 개인정보 보호 수준을 실질적으로 향상시키는  </br>
+      보안 관리·개인정보 컨설턴트로 성장하는 것을 목표로 합니다.</br>
+    </p>
+  </div>
+</section>
 
-    <!-- COMPLIANCE -->
-    <section id="compliance" class="section">
-        <h2 class="section-title line-trace">COMPLIANCE & GOVERNANCE</h2>
+<footer>
+  © 2025 최장현 · Hosted on GitHub Pages
+</footer>
 
-        <div class="card">
-            <p>
-                개인정보 처리 단계 분석(수집→보관→파기)과 ISMS-P 통제 요구사항을 기반으로  
-                실제 시스템과 프로세스 간의 gap을 식별하고,  
-                개선안을 제시하는 방식으로 컨설팅을 수행합니다.
-            </p>
-        </div>
-    </section>
-
-    <!-- ARCHITECTURE ANALYSIS -->
-    <section id="architecture" class="section">
-        <h2 class="section-title line-trace">SYSTEM ARCHITECTURE ANALYSIS</h2>
-
-        <div class="card">
-            <p>취약 버전과 개선 버전 구조를 비교하여 리스크를 정량화하고,  
-               보안 아키텍처 재설계를 수행합니다.</p>
-        </div>
-    </section>
-
-    <!-- WEB VULNERABILITY -->
-    <section id="vuln" class="section">
-        <h2 class="section-title line-trace">WEB VULNERABILITY ANALYSIS</h2>
-
-        <div class="card">
-            <p>
-                공격 시나리오(Exploit Flow) 분석,  
-                패킷 흐름도(Line Trace),  
-                그리고 개선 전·후 정책 비교를 통해  
-                실무형 취약점 개선 가이드를 제시합니다.
-            </p>
-        </div>
-    </section>
-
-    <!-- PERSONAL PROJECTS -->
-    <section id="projects" class="section">
-        <h2 class="section-title line-trace">PERSONAL SECURITY PROJECTS</h2>
-
-        <div class="grid-2">
-            <div class="card">
-                <h3>개인정보보호 컨설팅 실습</h3>
-                <p>개인정보 처리 단계별 흐름도 분석 및 법규 준수 검토</p>
-            </div>
-
-            <div class="card">
-                <h3>개인정보 흐름도(DTD) 제작</h3>
-                <p>개인정보 처리 시스템 내 수집, 이용, 제공, 파기 단계별 상세 흐름도 시각화</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO PROJECT LINKS -->
-    <section id="portfolio-projects" class="section">
-        <h2 class="section-title line-trace">PROJECT PORTFOLIO</h2>
-
-        <div class="grid-3">
-            <a href="https://www.notion.so/2b82ce5a73a48082b6c8c95af31e2f89" target="_blank" class="card">
-                <h3>개인 프로젝트</h3>
-                <p>Notion 기반 정리 문서</p>
-            </a>
-
-            <a href="https://github.com/team3-rebooting" target="_blank" class="card">
-                <h3>중간 프로젝트</h3>
-                <p>GitHub Repository</p>
-            </a>
-            <a href="https://tasty-broker-fc1.notion.site/3-_-2ca2ce5a73a48168a203f28cd3f4bfd2" target="_blank" class="card">
-                <h3>중간 프로젝트</h3>
-                <p>Notion 기반 정리 문서</p>
-            </a>
-            <div class="card">
-                <h3>파이널 프로젝트</h3>
-                <p>추후 업데이트 예정</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-        <h2 class="section-title line-trace">CONTACT</h2>
-
-        <div class="card">
-            이메일 : jh01122844@gmail.com  
-        </div>
-    </section>
-
-</main>
-
-<script src="assets/js/script.js"></script>
+</div>
 </body>
 </html>
